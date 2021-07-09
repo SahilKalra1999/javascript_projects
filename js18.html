@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Getelement by tagname method in javascript</title>
+        <script type="text/javascript">
+         function fn1()
+         {
+           let para=document.getElementsByTagName("p");
+           para[0].style.fontSize=25;
+           para[1].style.color="red";
+           para[1].style.fontSize=30;
+         }
+        </script>
+    </head>
+<body>
+    <p>This is paragrapgh 1</p>
+    <p>This is paragrapgh 2</p>
+    <p>This is paragrapgh 3</p>
+    <p>This is paragrapgh 4</p>
+    <p>This is paragrapgh 5</p>
+    <button onclick="fn1()">Click Me</button>
+</body>
+</html>

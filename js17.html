@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Select Box in javascript</title>
+        <script type="text/javascript">
+        function fn1(){
+         let select=document.getElementById("selectBox");
+         alert(select.options[select.selectedIndex].value);
+        }
+        </script>
+    </head>
+    <body>
+        <select id="selectBox">
+            <option value="Black">Black</option>
+            <option value="Green">Green</option>
+            <option value="Blue">Blue</option>
+            <option value="Red">Red</option>
+                </select>
+                <br>
+                <button onclick="fn1()">Click Me</button>
+    </body>
+</html>

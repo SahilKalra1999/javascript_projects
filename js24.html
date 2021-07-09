@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Regular Expression in JavaScript</title>
+        <script type="text/javascript">
+         function validate()
+         {
+             let user=document.getElementById("uName").value;
+             let regx= /^[7-9][0-9]{9}$/;
+             // regex=/^[5-9][a-z]{8}0/
+            
+             if(regx.test(user))
+             {
+                 alert("Valid Username");
+             }
+             else
+             {
+                 alert("Invalid username");
+                 document.getElementById("label1").style.visibility="visible";
+             }
+         }
+        </script>
+    </head>
+    <body>
+        <input type="text" placeholder="Username" id="uName"/><br>
+        <label id="label1" style="color:red; visibility: hidden;">Invalid</label><br>
+        <button id="btn1" onclick="validate()" type="button">Submit</button>
+        
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>EMail Address validation using regular expression in javascript</title>
+        <script type="text/javascript">
+              function validate() {
+                  let eMail=document.getElementById("uEmail").value;
+                  let regx=/^([a-z 0-9\.-]+)@([a-z0-9-]+).([a-z]{2,20})(.[a-z]{2,8})?$/;
+                  if(regx.test(eMail)) {
+                      document.getElementById("label1").innerHTML="Valid";
+                      document.getElementById("label1").style.visibility="visible";
+                      document.getElementById("label1").style.color="green";
+                  }
+                  else {
+                    document.getElementById("label1").innerHTML="Invalid";
+                      document.getElementById("label1").style.visibility="visible";
+                      document.getElementById("label1").style.color="red";
+                  }
+              }
+        </script>
+    </head>
+    <body>
+        <input type="email" id="uEmail" placeholder="Enter your Email"/><br>
+        <label id="label1"></label><br>
+        <button id="btn1" onclick="validate()" type="button">Submit</button>
+    </body>
+</html>

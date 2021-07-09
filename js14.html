@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>DOM Manipulation part 2 in javascript</title>
+        <script type="text/javascript">
+        function fn1()
+        {
+            var user=document.getElementById("text1").value;
+            var password=document.getElementById("text2").value;
+            if(user==password)
+            {
+                alert("Username and password are equals");
+            }
+            else
+            {
+                alert("Username and password are not equals");
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="text1" placeholder="Username">
+        <input type="password" id="text2" placeholder="Password">
+        <button onClick="fn1()" id="btn1">Click Me</button>
+    </body>
+</html>

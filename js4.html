@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>If-else in javascript</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        // If-else block in javascript
+        var x=4;
+        //checking for even and odd
+        if(x%2==0)
+        {
+            document.write("<h2> Even Number</h2>");
+        }
+        else
+        {
+            document.write("<h2>odd number</h2>");
+        }
+         //checking for positive, negative and zero
+         if(x>0)
+         {
+             document.write("<h2>positive number</h2>");
+         }
+         else if(x<0)
+         {
+             document.write("<h2>Negative number</h2>");
+         }
+         else
+         {
+             document.write("<h2>number is zero</h2>");
+         }
+
+         //checking for positive and even number
+         if(x>0)
+         {
+             document.write("<h2>positive number</h2>");
+             if(x%2==0)
+             {
+                 document.write("<h2>even number</h2>");
+             }
+             else
+             {
+                 document.write("<h2>odd number</h2>");
+             }
+         }
+         else
+         {
+             document.write("<h2>Negative Number</h2>");
+         }
+
+         //even and positive number check in single if
+         if(x>0 && x%2==0){
+             document.write("even and positive number");
+         }
+        </script>
+    </body>
+</html>

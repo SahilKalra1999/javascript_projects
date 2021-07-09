@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Introduction to objects</title>
+    </head>
+    <body>
+        <script type="text/javascript"> 
+        //one way of creating objects in javascript
+
+       var Car={
+           car_brand:"tesla",
+           car_model: "model3",
+           car_price: 2344,
+           teslaAutoPilot: function()
+           {
+               document.write("this car has auto pilot");
+           }
+       }
+       //we can also create the objects outside the object body
+       Car.fuelType="Electric";
+       document.write(typeof(Car.fuelType));
+       document.write("<br>");
+       
+       Car.teslaAutoPilot();
+       document.write("<h2>"+Car.car_brand+"</h2>");
+
+// Another way of creating objects in javascript
+
+       function Cars(car_brand, car_model, car_price){
+           this.car_brand=car_brand;
+           this.car_model=car_model;
+           this.car_price=car_price;
+           this.teslaAutoPilot=function()
+           {
+               document.write("<h2>This car has auto pilot</h2>");
+           }
+       }
+       var c1=new Cars("Tesla", "Model 3", 35000);
+       var c2=new Cars("Honda", "Jazz", 340);
+       c2.teslaAutoPilot();
+       console.log(c2.car_price);
+
+        </script>
+    </body>
+</html>

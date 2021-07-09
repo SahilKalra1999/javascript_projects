@@ -1,0 +1,14 @@
+.cl1 {
+color: red;
+size: 20;
+}
+.cl2{
+    color: royalblue;
+    size: 30;
+}
+.cl3{
+    color: sienna;
+    size: 50;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+}

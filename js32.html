@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Scaling Animation in javascript</title>
+        <script type="text/javascript">
+        var width=100;
+        var intervalID=0;
+        difference=2;
+         function increase() {
+           intervalID=setInterval(expand,20);
+         }
+         function expand() {
+             if(width<200) {
+                 width=width+difference;
+                 document.getElementById("img1").style.width=width;
+             }
+             else {
+                 clearInterval(intervalID);
+             }
+         }
+         function decrease() {
+             clearInterval(intervalID);
+            intervalID= setInterval(shrink,20);
+         }
+         function shrink() {
+             if(width>100) {
+                 width=width-difference;
+                 document.getElementById("img1").style.width=width;
+             }
+             else {
+                 clearInterval(intervalID);
+             }
+            }
+        </script>
+    </head>
+    <body>
+        <img src="chrome.jpg" id="img1" onmouseover="increase()" onmouseout="decrease()" width="100px"/>
+    </body>
+</html>

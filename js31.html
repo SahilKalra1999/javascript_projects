@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Fading Animation in JavaScript</title>
+        <script type="text/javascript">
+        var intervalID=0;
+        var opacity=0;
+         function fadeOut() {
+           intervalID=setInterval(hide,20);
+         }
+         function fadeIn() {
+            intervalID=setInterval(show,20);
+         }
+         function show() {
+             var img=document.getElementById("img1");
+             opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+             if(opacity<1) {
+                 opacity=opacity+0.1;
+                 img.style.opacity=opacity;
+             }
+             else {
+                 clearInterval(intervalID);
+             }
+         }
+         function hide() {
+             var img=document.getElementById("img1");
+             opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+              if(opacity>0) {
+                  opacity=opacity-0.1;
+                  img.style.opacity=opacity;
+              }
+              else {
+                  clearInterval(intervalID);
+              }
+         }
+        </script>
+    </head>
+    <body>
+        <br><br>
+        <img id="img1" src="chrome.jpg" width="250px"/>
+        <button id="btn1" onclick="fadeOut()" type="button">FadeOut</button>
+        <button id="btn2" type="button" onclick="fadeIn()">FadeIn</button>
+    </body>
+</html>

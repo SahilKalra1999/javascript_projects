@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Selector part in jquery</title>
+    </head>
+    <script src="jquery/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+     function fn1() {
+        $("#seconddiv").fadeToggle(1000);
+     $("#firstdiv").fadeToggle(4000);
+        $("#thirddiv").fadeToggle(8000);
+         
+         
+       
+     }
+    </script>
+    <body>
+        <link rel="stylesheet" href="stylesheet/style35.css">
+        <h1 class="heading1"><centre>HI, Welcome to the Fading World!</centre></h1>
+        <div id="firstdiv" class="mydiv">
+            <p>HEY, I am part of the first division</p>
+            <p>so, I will fade first...</p>
+
+        </div>
+        <div id="seconddiv" class="mydiv">
+           <p>You think that, you will fade first, but bro this is not going to happens...</p>
+           <ul>
+               <li>I am list 1, so i will fade first..</li>
+               <li>I am list 2, so i will go after you..</li>
+               <li>I am list 3 and I thing none of us are going to fade first..</li>
+               <li>Hey, list 4, am agree with you, but let see, what's going to happen..</li>
+
+           </ul>
+        </div>
+        <div id="thirddiv" class="mydiv">
+              <ul>
+                  <li>Hey you all, I am part of the division 3, So i will go first..</li>
+                  <li>Yes, we will fade first..</li>
+                  <li>Let see, who is going to fade first..</li>
+              </ul>
+        </div>
+
+        <div id="fourthdiv" class="mydiv">
+          <h3>You guys are getting fade ?</h3>
+        </div>
+        <button id="btn1" type="button" onclick="fn1()">Click Me</button>
+    </body>
+</html>

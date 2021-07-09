@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Mobile NUmber Validation in javaScript using regular expression</title>
+        <script type="text/javascript">
+          function validate() {
+              let user= document.getElementById("uName").value;
+              let regx=/^[7-9][0-9]{9}$/;
+              if(regx.test(user)) {
+                  document.getElementById("label1").innerHTML="valid";
+                  document.getElementById("label1").style.visibility="hidden";
+                  document.getElementById("label1").style.color="green";
+              }
+              else {
+                  document.getElementById("label1").innerHTML="Invalid";
+                  document.getElementById("label1").style.visibility="visible";
+                  document.getElementById("label1").style.color="red";
+              }
+          }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="uName" placeholder="Username"/><br>
+        <label id="label1"></label><br>
+        <button id="btn1" type="button" onclick="validate()">Submit</button>
+
+    </body>
+</html>

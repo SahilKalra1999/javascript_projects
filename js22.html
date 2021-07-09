@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Form Validation</title>
+        <script type="text/javascript">
+        function validate()
+        {
+            let user=document.getElementById("uName");
+            let pass=document.getElementById("pass");
+            if(user.value.trim()=="")
+            {
+                alert("username is blank");
+                user.style.border="solid 3px red";
+                document.getElementById("label1").style.visibility="visible";
+                return false;
+            }
+            else if(pass.value.trim()=="")
+            {
+                alert("password is blank");
+                pass.style.border="solid 3px red";
+                document.getElementById("label1").style.visibility="visible";
+                return false;
+
+            }
+            else if(pass.value.trim().length<5)
+            {
+                alert("Password length should be atleast 6");
+                pass.style.border="solid 3px red";
+                document.getElementById("label1").style.visibility="visible";
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return validate()" action="js21part2.html">
+            <input type="text" id="uName" placeholder="Username"/>
+            <label id="label1" style="color: red; visibility: hidden;">Invalid</label>
+            <br> <br>
+            <input type="password" id="pass" placeholder="Password"/>
+            <label id="label1" style="color: red; visibility: hidden;">Invalid</label>
+            <br><br>
+            
+            <button id="btn1" type="submit">Submit</button>
+        </form>
+    </body>
+</html>
