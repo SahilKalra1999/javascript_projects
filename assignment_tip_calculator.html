@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .bill{
+            border: 2px solid black;
+          width: 100%;
+          max-width: 300px;
+          margin:auto;
+          padding-left: 30px;
+        }
+        .h1{
+            color: blue;
+            
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    function calculateBill() {
+        var billAmount=document.getElementById("text1").value;
+        var getMember=document.getElementById("selectMember").value;
+        var getFeedback=document.getElementById("selectBox").value;
+        if(billAmount && getMember && getFeedback)
+        {
+            var result=billAmount/getMember;
+        document.getElementById("result").innerHTML="Single Person's Sharing: "+result.toFixed(2);
+        document.getElementById("feedBack").innerHTML="Feedback: "+getFeedback;
+        document.getElementById("text1").value="";
+        document.getElementById("selectMember").value="";
+        document.getElementById("selectBox").value="";
+        }
+        else
+        {
+            alert("Please fill all the details..");
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="bill">
+    <h1 class="h1">Bill Information</h1>
+    <input type="number" id="text1" placeholder="Enter the bill amount."/><br>
+    <h2>How was your service?</h2>
+    <select id="selectBox">
+        <option value="" disabled selected hidden>Choose Feedback</option>
+        <option value="good">Good</option>
+        <option value="very good">Very Good</option>
+        <option value="Excellent">Excellent</option>
+        <option value="not so good">Not so good</option>
+        <option value="could be better">could be better</option>
+            </select>
+            <h2>How many people are sharing the bill?</h2>
+            <input type="number" id="selectMember" placeholder="Enter total members: "/>
+             
+             <button id="calculate" onclick="calculateBill()" type="button">Calculate</button><br><br>
+             <h2 id="result"></h2><br>
+             <h2 id="feedBack"></h2>
+    </div>
+      
+</body>
+</html>
